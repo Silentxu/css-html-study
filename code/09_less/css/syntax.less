@@ -1,0 +1,96 @@
+.box{
+    width: 100px;
+    height: $width;
+}
+
+@a:red;
+
+.box2{
+    color: @a;
+}
+
+.box1{
+    width: 300px;
+    .box2{
+        height: 200px;
+    }
+}
+
+@b:box3;
+
+.box1>.@{b}{
+    background-color: #fff;
+}
+
+
+
+.box1 {
+    // &表示外层的父元素
+    &:hover{
+        color: @a;
+    }
+}
+
+.p1{
+    width: 100px;
+    height: 200px;
+}
+// ：extend（）对当前选择器扩展指定选择器的样式（选择器分组）
+.p2:extend(.box1){
+   color:red;
+}
+.div1{
+    width: 300px;
+    .div2{
+        width:200px;
+        height: 200px;
+    }
+}
+
+// .div3:extend(.div1){
+//     background-color: #fff;
+// }
+
+.div3{
+    &:extend(.div1);
+    background-color: #fff;
+}
+.p4{
+    &:extend(.p1);
+    background-color: #bfc;
+}
+// 补充的主体需注意，会将其包含的一并补充。 
+// .p3{
+//     // 直接对指定的样式进行引用，这里就相当于将box1的样式进行了复制
+//     // mixin 混合
+//     .box1();
+// }
+div pre{
+    width: 110px;
+}
+
+pre:hover,
+.some-class {
+  &:extend(div pre);
+  background-color: #fff;
+}
+
+.bucket {
+  tr &{ // nested ruleset with target selector
+    color: blue;
+  }
+}
+// .some-class:extend(tr .bucket) {}
+
+// :nth-child(1n+3) {
+//     color: blue;
+//   }
+//   .child:extend(:nth-child(n+3)) {}
+
+.text(@e,@f){
+    width: @e;
+    height: @f;
+}
+div{
+    .text(100px,200px)
+}

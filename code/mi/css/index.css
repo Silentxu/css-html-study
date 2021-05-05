@@ -1,0 +1,499 @@
+/* 主页index.html的主页 */
+
+/* 顶部导航条容器 */
+.topbar-wrapper{
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+}
+/* 左侧导航 */
+.leftbar, .topbar li{
+    float: left;
+}
+/* 用户和购物车 */
+.cart, .customer{
+    float: right;
+}
+
+/* 超链中的字体 */
+.topbar a{  
+    font-size: 12px;
+    color: #B0B0B0;
+    display: block;
+}
+
+/* 超链悬停效果 */
+.topbar a:hover{
+    color: #FFFFFF;
+}
+
+/* 分隔符 */
+.line{
+    font-size: 12px;
+    color: #393E3E;
+    margin: 0 7px;
+}
+
+/* 下弹图片 */
+.download{
+    position: relative;
+}
+.leftbar .img-wrapper{ 
+    /* display: none; */
+    width: 125px;
+    /* height: 149px; */
+    height: 0px;
+    overflow: hidden;
+    position: absolute;
+    background-color: #fff;
+    top: 40px;
+    left: -40px;    
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    transition: height 0.3s;
+    z-index: 9999;
+}
+/* 设置三角箭头 方法1 结合到index.html里*/
+/* .download .triangle{
+    
+ }
+  */
+.download:hover::before{
+    content: '';
+    border: 8px transparent solid; 
+    border-top: none; 
+    border-bottom-color:white;
+    position:absolute;
+    bottom: -1px;
+    left: 15px;
+}
+
+.download:hover .download::before{
+    display: block;
+}
+.download:hover .img-wrapper{
+    display: block;
+    height: 149px;
+}
+
+.download:hover a{
+    color: #FFFFFF;
+}
+
+img{
+    width: 86px;
+    vertical-align:bottom ;
+    padding: 22px 19px ;
+    padding-bottom: 0px;
+}
+
+.download .text{
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+/* 购物车效果 */
+.cart{
+    position: relative;
+}
+/* 购物车图标字体 */
+.cart i{
+    margin-right: 5px;
+}
+.shopping-cart{
+    position: relative;
+    z-index: 9999;
+}
+.shopping-cart a{
+    width: 120px;
+    text-align: center;
+    background-color: #424242;
+}
+.shopping-cart li{
+    margin-left: 20px; 
+}
+
+/* 购物车弹出效果 */
+.cart:hover a{
+    height: 41px;
+    background-color: #fff;
+    color: #FF6700;
+} 
+
+.detail{
+    display: none;
+    width: 316px;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    z-index: 999;
+}
+
+.cart:hover .detail{
+    display: block;
+}
+
+.detail-box{
+    line-height: 100px;
+    text-align: center;
+    /* vertical-align: center; */
+}
+
+/* 头部 */
+
+.header-wrapper{
+    width: 100%;
+    height: 100px;
+}
+
+.header{
+    position: relative;
+}
+
+.logo-wrapper,.img-wrapper li,.info,.info li,.search input{
+    float: left;
+}
+
+.search{
+    float: right;
+}
+
+/* logo */
+.logo{
+    display: block;
+    width: 56px;
+    height: 56px;
+    border-radius: 23px;
+    background-color: #FF6700;
+    background-image: url(/mi/img/mi-logo.png);
+    background-position: 0px 0px; 
+    transition:background-position 0.2s ;
+    text-indent: -9999px;
+
+}
+.logo{
+    margin-top: 22px;
+    margin-right: 50px;
+}
+.logo:hover{
+    background-position: 56px 0px;
+    transition:background-position 0.2s ;
+}
+/* 中间信息栏 */
+.info a{
+    display: block;
+    padding: 0px 10px;
+    font-size: 16px;
+    color: #333;
+    line-height: 100px;
+}
+
+.info .all-goods{
+    visibility: hidden;
+}
+
+.info a:hover{
+    color: #FF6700;
+}
+
+/* 信息框 下框 */
+
+.info .bar{
+    box-sizing: border-box;
+    width: 234px;
+    height: 460px;
+    padding: 20px 0px;
+    background-color: rgba(0,0,0,0.35);
+    position: absolute;
+    left: 0px;
+    z-index: 999;
+}
+
+.bar a{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(255, 255, 255, .8);
+    padding: 0px;
+    padding-left: 30px;
+    display: block;
+    line-height: 42px;
+    height: 42px;
+}
+ 
+.bar nav i{
+    float: right; 
+    font-size: 20px;
+    padding-top: 10px;
+    margin-right: 24px;
+}
+
+.bar a:hover{
+    color: rgb(255, 255, 255, .8);
+    background-color: #FF6700;
+}
+
+/* 右边搜索框 */
+.search{
+    position: relative;
+}
+/* 输入框 */
+.search-form{
+    box-sizing: border-box;
+    width: 245px;
+    height: 50px;
+    border: 1px #E0E0E0 solid;
+    position: absolute;
+    top: 24px;
+    left: -296px;
+    outline: none;
+    z-index: 99;
+}
+/* 按钮 */
+.search .fas{
+    box-sizing: border-box;
+    width: 52px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px #E0E0E0 solid;
+    position: absolute;
+    top: 24px;
+    left: -52px;
+    z-index: 100;
+    font-size: 18px;
+    color:#696161;
+    transition: color , 0.2s;
+    transition:background-color, 0.2s ;
+    outline: none;
+}
+
+.search .fas:hover{
+    border: none;
+    background-color: #FF6700;
+    color: #FFFFFF;
+    /* transition: color , 0.2s;
+    transition:background-color, 0.2s ; */
+}                      
+.search:hover input{
+    border:1px solid #B0B0B0;
+}
+.search .search-form:focus,
+.search .search-form:focus + .fas{
+    border-color: #FF6700 ;
+}
+
+
+
+/* 弹出层 */
+.phone-list{
+    position: absolute;
+    /* height: 230px;  */
+    height: 0px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    /* border-top: 1px solid rgb(224, 224, 224);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) ; */
+    top: 100px;
+    left: 0px;
+    transition: height , 0.3s;
+    z-index: 9999;  
+}
+
+.info .show:hover~.phone-list, 
+.phone-list:hover{
+    height: 230px;
+    border-top: 1px solid rgb(224, 224, 224);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2) ;
+
+}
+.phone-list{
+    float: left;
+}
+.header-wrapper{
+    position: relative;
+}
+
+
+/* 轮播图层 */
+.banner{
+    position: relative;
+    height: 460px;
+}
+.banner img{
+    width: 100%;
+    padding: 0px;
+    vertical-align: top;
+}
+
+.banner .img-list li{
+    position: absolute;
+}
+
+.point{
+    position: absolute;
+    bottom: 26px;
+    right: 35px;
+}
+.banner .point a{
+    float: left;
+    width: 6px;
+    height: 6px;
+    margin-left: 7px;
+    border: 2px rgba(225,225,225,.4) solid;
+    border-radius: 50%;
+    background-color:rgba(0, 0, 0, .4);
+}
+
+.point a:hover,
+.point a.active{
+    border-color: rgba(0, 0, 0, .4);
+    background-color: rgba(225,225,225,.4);
+}
+
+/* 轮播图 左右切换按钮 */
+
+
+
+.prev-next a{
+    position: absolute;
+    width: 41px;
+    height: 69px;
+    /* background-color: red; */
+    /* 定位后的垂直居中 */
+    top: 0px;
+    bottom: 0px;
+    margin: auto 0px;
+    background-image: url(/mi/img/icon-slides.png);
+}
+
+.prev-next .prev{
+    left: 234px;
+    background-position: -83px 0px;
+
+}
+.prev-next .prev:hover{
+    background-position: 0px 0px;
+
+}
+
+.prev-next .next{
+    right: 0;
+    background-position: -125px 0px;
+}
+
+.prev-next .next:hover{
+    background-position: -43px 0px;
+
+}
+
+/* 侧边导航栏 */
+
+.sidebar-wrapper{
+    width: 25px;
+    height: 261px;
+    position: fixed;
+    right: 50%;
+    margin-right: -638px;
+    bottom: 41px;
+}
+
+.sidebar li a{
+    display: block;
+    color: #9C9C9C;
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    height: 41px;
+    line-height: 38px;
+    text-align: center;
+    border: 1px solid #F5F5F5;
+    margin-bottom: 1px;
+}
+
+.sidebar li:last-child{
+    margin-top: 12px;
+}
+
+.sidebar li a:hover{
+    color:#FF6700;
+}
+
+/* 下侧展示栏 */
+.show-goods{
+    margin-top: 14px;
+    margin-bottom: 26px;
+}
+.shortcut{
+    box-sizing: border-box;
+    width: 234px;
+    height: 170px;
+    background-color: #5F5750;
+    float: left;
+    margin-right: 14px;
+    padding-top: 2px;
+    padding-left: 3px;
+}
+.shortcut li{
+    float: left;
+    position: relative;
+}
+.shortcut li a{
+    display: block;
+    width: 76px;
+    height: 84px;
+    color: #EDEDEC;
+    text-align: center;
+    overflow: hidden;
+    
+}
+.shortcut li i{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+
+.show-goods .img,.img li{
+    float: left;
+}
+
+.show-goods .img img{
+    width: 316px;
+    padding: 0px;
+    
+}
+.img li{
+    margin: 0px;
+    margin-right: 15px;
+}
+
+.show-goods .img li:last-child{
+    margin-right: 0px;
+}
+
+.shortcut li::before{
+    content: "";
+    position: absolute;
+    width: 64px;
+    height: 1px;
+    background-color: #665e57;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    margin: 0px auto;
+}
+
+.shortcut li::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 64px;
+    background-color: #665e57;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin: auto 0px;
+}

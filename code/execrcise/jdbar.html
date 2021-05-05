@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东顶部导航条</title>
+    <link rel="stylesheet" href="/execrcise/css/reset.css">
+    <link rel="stylesheet" href="/06_font&backgrond/fontAwesome/css/all.css">
+    <style>
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        body {
+            font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+        }
+
+        .top-bar-wrapper {
+            width: 100%;
+            background-color: #e3e4e5;
+            height: 30px;
+            line-height: 30px;
+            border-bottom: 1px #ddd solid;
+        }
+
+        /* 设置字体样式 */
+        .top-bar a,
+        .top-bar span,
+        .top-bar i {
+            color: #999;
+            text-decoration: none;
+        }
+
+        .top-bar {
+            /* 固定宽度 */
+            width: 1190px;
+            /* 设置水平居中 */
+            margin: 0 auto;
+        }
+
+        .top-bar a:hover,
+        .top-bar .highlight {
+            color: #f20215;
+        }
+
+        .top-bar .fas {
+            margin-left: 2px;
+        }
+
+        .location {
+            float: left;
+            position: relative;
+        }
+
+        .location:hover .city-list {
+            display: block;
+        }
+
+        .location:hover .current-city {
+            background-color: #fff;
+            border: 1px rgb(204, 204, 204) solid;
+            border-bottom: none;
+        }
+
+        .location .current-city {
+            border: 1px transparent solid;
+            padding: 0 8px;
+            position: relative;
+            z-index: 9999;
+        }
+
+        .location .city-list {
+            /* display: none; */
+            box-sizing: content-box;
+            width: 320px;
+            height: 436px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px rgb(204, 204, 204) solid;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+            position: absolute;
+            top: 30px;
+            z-index: 999;
+
+        }
+
+        .province-list li {
+            width: 60px;
+            padding: 2px 0;
+            line-height: 18px;
+            float: left;
+        }
+
+        .province-list a {
+            padding: 2px 8px;
+            margin: 2px 0;
+
+        }
+
+        .province-list a:hover {
+            background-color: #F4F4F4;
+        }
+        /* 设置分隔符 */
+        .shortcut .apart {
+            width: 1px;
+            height: 10px;
+            background-color: rgb(209, 208, 208);
+            margin: 12px 5px 0;
+        }
+
+
+
+        .shortcut {
+            float: right;
+        }
+
+        /* 我的京东部分设置 */
+        .my-all{
+            position: relative;
+
+        }
+
+        .my-all:hover .jd-my {
+            display: block;
+        }
+        /* 我的京东 弹出框的整体效果 */
+        .jd-my {
+            display: none;
+            box-sizing: content-box;
+            width: 280px;
+            height: 161px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px rgb(204, 204, 204) solid;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+            position: absolute;
+            top: 30px;
+            left: 5px;
+            z-index: 999;
+        }
+
+        /* 设置 我的京东  */
+        .myjd {
+            border: 1px transparent solid;
+            padding: 0 4px;
+            position: relative;
+            z-index: 9999;
+        }
+
+        /* 设置我的京东hover效果 */
+        .my-all:hover .myjd {
+            background-color: #fff;
+            border: 1px rgb(204, 204, 204) solid;
+            border-bottom: none;
+        }
+        /* 我的京东 弹出的行间距 */
+        .shortcut .mylist1 {
+            line-height: 30px;
+        }
+
+        .mylist1 li {
+            width: 100px;
+        }
+
+        .shortcut li {
+            margin:0 5px;
+            float: left;
+
+        }
+
+        .shortcut .my-all{
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 创建外围的容器 -->
+    <div class="top-bar-wrapper">
+        <!-- 创建外部容器 -->
+        <div class="top-bar clearfix">
+            <!-- 左侧的菜单 -->
+            <div class="location">
+                <div class="current-city">
+                    <i class="fas fa-map-marker-alt" style="color: #f20215;"></i>
+                    <a href="JavaScript:;" title="北京">北京</a>
+                </div>
+                <!-- 设置城市列表 -->
+                <div class="city-list">
+                    <ul class="province-list">
+                        <li><a href="javascrtpt:;">北京</a></li>
+                        <li><a href="javascrtpt:;">上海</a></li>
+                        <li><a href="javascrtpt:;">天津</a></li>
+                        <li><a href="javascrtpt:;">重庆</a></li>
+                        <li><a href="javascrtpt:;">河北</a></li>
+                        <li><a href="javascrtpt:;">山西</a></li>
+                        <li><a href="javascrtpt:;">河南</a></li>
+                        <li><a href="javascrtpt:;">辽宁</a></li>
+                        <li><a href="javascrtpt:;">吉林</a></li>
+                        <li><a href="javascrtpt:;">黑龙江</a></li>
+                        <li><a href="javascrtpt:;">内蒙古</a></li>
+                        <li><a href="javascrtpt:;">江苏</a></li>
+                        <li><a href="javascrtpt:;">山东</a></li>
+                        <li><a href="javascrtpt:;">安徽</a></li>
+                        <li><a href="javascrtpt:;">浙江</a></li>
+                        <li><a href="javascrtpt:;">福建</a></li>
+                        <li><a href="javascrtpt:;">湖北</a></li>
+                        <li><a href="javascrtpt:;">湖南</a></li>
+                        <li><a href="javascrtpt:;">广东</a></li>
+                        <li><a href="javascrtpt:;">广西</a></li>
+                        <li><a href="javascrtpt:;">江西</a></li>
+                        <li><a href="javascrtpt:;">四川</a></li>
+                        <li><a href="javascrtpt:;">海南</a></li>
+                        <li><a href="javascrtpt:;">贵州</a></li>
+                        <li><a href="javascrtpt:;">云南</a></li>
+                        <li><a href="javascrtpt:;">西藏</a></li>
+                        <li><a href="javascrtpt:;">陕西</a></li>
+                        <li><a href="javascrtpt:;">甘肃</a></li>
+                        <li><a href="javascrtpt:;">青海</a></li>
+                        <li><a href="javascrtpt:;">宁夏</a></li>
+                        <li><a href="javascrtpt:;">新疆</a></li>
+                        <li><a href="javascrtpt:;">港澳</a></li>
+                        <li><a href="javascrtpt:;">台湾</a></li>
+                        <li><a href="javascrtpt:;">钓鱼岛</a></li>
+                        <li><a href="javascrtpt:;">海外</a></li>
+                    </ul>
+
+                    <ul class="region-list">
+                        <li></li>
+                    </ul>
+
+                    <ul class="AvailableSites-list">
+                        <li></li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+            <!-- 右侧的菜单 -->
+            <ul class="shortcut">
+                <li><a href="JavaScript:;">你好，请登录</a>
+                    <a class="highlight" href="JavaScript:;">免费注册</a>
+                </li>
+                <li class="apart"></li>
+                <li><a href="JavaScript:;">我的订单</a></li>
+
+                <li class="apart"></li>
+                <div class="my-all">
+                    <li class="myjd">
+                        <a href="JavaScript:;">我的京东
+                            <i class="fas fa-angle-down"></i>
+                        </a>
+                    </li>
+                    <div class="jd-my">
+                        <ul class="mylist1">
+                            <li><a href="javascrtpt:;">待处理订单</a></li>
+                            <li><a href="javascrtpt:;">消息</a></li>
+                            <li><a href="javascrtpt:;">返修退换货</a></li>
+                            <li><a href="javascrtpt:;">我的问答</a></li>
+                            <li><a href="javascrtpt:;">降价商品</a></li>
+                            <li><a href="javascrtpt:;">我的关注</a></li>
+                        </ul>
+                        <ul class="mylist2">
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <li class="apart"></li>
+                <li><a href="JavaScript:;">京东会员</a>
+                </li>
+
+                <li class="apart"></li>
+                <li><a class="highlight" href="JavaScript:;">企业采购</a>
+                    <i class="fas">&#xf107;</i>
+                </li>
+
+                <li class="apart"></li>
+                <li><span>客户服务</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                <li class="apart"></li>
+                <li><span>网站导航</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                <li class="apart"></li>
+                <li><span>手机京东</span></li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

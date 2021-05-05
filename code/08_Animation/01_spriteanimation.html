@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            height: 80px;
+            width: 80px;
+            background-image: url(img/u=2910991285\,2453802100&fm=26&gp=0.png);
+            /* background-position: 0 0; */
+            margin: 20px auto;
+            /* transition: 1.5s steps(10); */
+
+            /* 设置动画 */
+            /* animation-name: test;
+            animation-duration: 1.5s;
+            animation-timing-function: steps(10); */
+            animation:test3 4s steps(10);
+            animation-iteration-count: infinite;
+        }
+
+        /* 动画 
+                动画和过渡类似。都是可以实现一些动态的效果
+                    不同的是过去需要在摸个属性发生变化时才会触发
+                    动画可以自动触发动态效果
+                    
+                设置动画效果，必须需要设置一个关键帧    
+
+                animation-direction
+                    指定动画运行的方向
+                        可选值
+                            normal 默认值 从from 向 to 运行 每次都是这样
+                            reverse 从to 想from 运行 每次都是这样
+                            alternative 从from 向 to运行重复执行动画时反向执行
+                            alternative-reverse 从to 向 from运行 重复执行动画时反向执行
+        */
+
+        @keyframes test1 {
+
+            /* 表示开始位 */
+            from {
+                background-position: 0 0;
+            }
+
+            /* 表示结束位 */
+            to {
+                background-position: -800px 0;
+            }
+        }
+
+        @keyframes test2 {
+
+            /* 表示开始位 */
+            from {
+                background-position: 0 -80px;
+            }
+
+            /* 表示结束位 */
+            to {
+                background-position: -800px -80px;
+            }
+        }
+        @keyframes test3 {
+
+            /* 表示开始位 */
+            0% {
+                background-position: 0 0px;
+            }
+
+            /* 表示结束位 */
+            50% {
+                background-position: -800px 0px;
+            }
+
+            50.09%{
+                background-position: 0 -80px;
+            }
+
+            100%{
+                background-position: -800px -80px;
+            }
+        }
+
+        /* .box1:hover{
+            background-position: -800px 0;
+        } */
+    </style>
+
+</head>
+
+<body>
+    <div class="box1">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素</title>
+
+    <style>
+        p {
+            font-size: 20px;
+        }
+
+        /* 
+            伪元素 表示页面中特殊但是并不存在的元素（特殊的位置）
+                伪元素使用 ：：开头
+         */
+
+        /* 
+            ::first-letter 第一个字母
+         */
+        p::first-letter {
+            font-size: 50px;
+        }
+
+        /* 
+            ::first-line 第一行
+         */
+
+        p::first-line {
+            background-color: yellow;
+        }
+
+        /* 
+            ::selection 被选中的内容
+          */
+
+        p::selection {
+            background-color: yellowgreen;
+        }
+
+        /* 
+            ::before元素的开始
+            ::after元素的结束
+                -before和after必须结合content使用
+            由css添加的内容，所以无法被选中    
+         */
+        div::before{
+            content: "【";
+        }
+        div::after{
+            content:"】";
+            color: yellowgreen;
+            font-size: 15px;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>就这么办了</div>
+
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quaerat veniam eos asperiores laboriosam
+        reiciendis dolorem. Fuga, consectetur repellat id ipsum sit et, sed, autem magni nostrum voluptas delectus
+        quidem.</div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae maxime alias exercitationem voluptatibus
+        quis praesentium vel reiciendis nobis fuga delectus, cumque quas placeat dolore libero nesciunt dolor aspernatur
+        consequuntur qui.
+    </p>
+</body>
+
+</html>

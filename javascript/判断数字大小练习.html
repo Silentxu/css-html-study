@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        while (true) {
+            while (true) {
+            var score = prompt("输入你的成绩");
+            if (score >=0 && score <=100) {
+                break;
+            }
+            alert("请输入有效的数字！！！");
+        }
+
+        if (score > 100 || score < 0 || isNaN(score)) {
+            alert("请输出符合规范的分数")
+        } else if (score == 100) {
+            alert("一辆宝马")
+        } else if (score > 80) {
+            alert("一台苹果")
+        } else if (score > 60) {
+            alert("一本参考书")
+        } else {
+            alert("啥也没有")
+        }
+        }
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

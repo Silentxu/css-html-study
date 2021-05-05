@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/03_layout/CSS/reset.css">
+    <style>
+        body {
+            margin: 10px;
+        }
+
+        .news-wrapper{
+            width: 450px;
+            border-top :1px gray solid;
+        }
+        .news-title{
+            display: inline-block;
+            height: 32px;
+            line-height: 32px;
+            border-top: 1px red solid;
+            margin-top: -1px;
+        }
+
+        .news-title a {
+            /* 去除下划线 */
+            text-decoration: none;
+            /* 设置颜色 */
+            color: #404068;
+            /* 设置文字加粗 */
+            font-weight: bold;
+        }
+        .news-img{
+            margin-top: 10px;
+        }
+        .news-list li {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="news-wrapper">
+        <!-- 标题 -->
+        <h2 class="news-title">
+            <a href="#">体育</a>
+        </h2>
+        <!-- 新闻图片 -->
+        <div class="news-img">
+            <a href="javascript:;"><img src="/execrcise/img/2021-03-19_134911.png" alt=""></a>
+        </div>
+        <ul class="news-list">
+            <li><a href="javascript:;">新科状元42分创纪录！森林狼复仇太阳 唐斯41分</a></li>
+            <li><a href="javascript:;">奇才爆冷胜联盟第一！韦少35＋15＋13比尔43分</a></li>
+            <li><a href="javascript:;">利拉德首节21分全场36＋6 开拓者赛季横扫鹈鹕</a></li>
+            <li><a href="javascript:;">淘汰热刺！中超旧将连过4人1条龙+戴帽 穆帅脸色铁青</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

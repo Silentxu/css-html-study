@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/mi/css/reset.css">
+    <style>
+        li{
+            float: left;
+            width: 40px;
+            height: 40px;
+        }
+        .box1{
+            background-color: orange;
+            /* visibility: hidden; */
+        }
+        .box2{
+            background-color: #bfa;
+        }
+        
+
+        li:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        表单
+            在网页中使用表单， 表单用于将本地数据提交给远程服务器
+            使用form标签来创建一个表单
+     -->
+
+    <!-- form的属性
+        action 表单要提交的服务器地址    
+    -->
+
+    <form action="01_table.html">
+    <!-- 
+        文本框
+        注意 数据要提交给服务器中，必须要为元素指定一个name属性
+     -->
+        用户名 <input type="text" name="username">
+        <br>
+        密码 <input type="password" name="password">
+        <br>
+    <!-- 单选按钮
+        像这种选择框，必须要指定一个value属性，value属性最终会作为用户的填写的值
+        checked可以将单选按钮设置为默认选中 
+    -->
+        单选按钮<input type="radio" name="hello" value="a" checked>
+        <input type="radio" name="hello" id="b">
+        <br>
+
+    <!-- 
+        多选框
+     -->
+
+        多选框 <input type="checkbox" name="hell" id="a">
+        <input type="checkbox" name="hell" id="b">
+        <br>
+
+        <!-- 下拉列表 -->
+        <select name="haha" id="">
+            <option value="i">选项1</option>
+            <option value="i">选项2</option>
+            <option value="i">选项3</option>
+        </select>
+        <br>
+        <input type="button" value="注册">
+
+        <input type="submit" value="提交">
+    </form>
+
+
+    <ul>
+        <li class="box1"></li>
+        <li class="box2"></li>
+    </ul>
+</body>
+
+</html>

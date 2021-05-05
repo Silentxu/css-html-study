@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            border:10px red solid;
+            padding: 20px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-left: 100px;
+            margin-right: 100px;
+
+            /* 
+                外边距（margin）
+                    外边距不会影响盒子可见框的大小
+                    但是外边距会影响盒子的位置
+                    一共有4个方向的外边距
+                        margin-top
+                            上外边距 设置一个正值(负值往相反方向移动)，元素会向下移动
+                        margin-right
+                            默认情况下设置margin-right 不会产生任何效果
+                        margin-bottm
+                            下外边距，设置一个正值，其下边的元素会向下移动
+                        margin-left
+                            左外边距，设置一个正值，元素会向右移动
+
+                    元素在页面中是按照自左向右的顺序移动的
+                        所以默认情况下如果我们设置的左和外边距则会移动元素自身
+                        而设置下和右边距会移动其他元素                
+             */
+            
+        }
+
+        .inner{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            border:10px red solid;
+            padding: 20px;
+            margin-left: 230px;
+            margin-top: -30px;
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(151, 165, 240);
+            border:10px red solid;
+            padding: 20px;
+            margin-left: 360px;
+            margin-top: -100px; 
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"><div class="inner"></div></div>
+    <div class="box2"></div>
+</body>
+</html>

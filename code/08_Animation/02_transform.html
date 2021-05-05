@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/mi/css/reset.css">
+    <style>
+        html{
+            /* 设置当前网页的视距为800px 人眼距离网页的距离 */
+            perspective: 800px;
+        }
+        body{
+            border:1px solid red;
+            background-color: rgb(219, 219, 219);
+        }
+        .box1{
+            width: 200px;
+            height: 500px;
+            margin-top: 20px;
+            background-color: #fff;
+            transition: all 1s;
+            float: left;
+        }
+
+        .box1:hover{
+            transform: translateY(-10px);
+            box-shadow:0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .box2{
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            background-color: red;
+            transition: 2s;
+        }
+        /* 
+            z轴平移 调整元素在z轴的位置，正常情况就是调整元素和人眼之间的距离
+                距离越大 元素离人越近
+            z轴平移属于立体效果（近大远小），默认情况下网页是 不支持透视，如果需要看见效果
+                必须设置网页的视距    
+        */
+        .box2:hover{
+            /* transform: translateZ(300px); */
+            /* transform: rotateX(45deg) rotateZ(100deg); */
+            transform: rotateZ(100deg) rotateX(45deg) ;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

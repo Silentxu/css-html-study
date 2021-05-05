@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>群组选择器</title>
+
+    <style type="text/css">
+        .red{
+            color:red;
+        }
+
+        div.red{
+            font-size: 40px;
+        }
+        /* 
+            div.red .a.b.c 这类组合起来的选择器 是属于交集类也就是条件都要符合
+        */
+
+        /* 
+            div,p （群组选择器）这类以，号来连接的这属于并集，都能产生效果  
+            (类选择器优先度比标签选择器高，所以div实际显示不变,span套用效果)  
+        */
+
+        div,span{
+            color: royalblue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="red">div在此</div>
+
+    <p class="red">p在此</p>
+
+    <span>一句话</span>
+
+    <h1>标题</h1>
+
+    <p>段落</p>
+
+</body>
+</html>

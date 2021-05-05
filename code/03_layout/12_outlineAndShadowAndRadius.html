@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            轮廓线和阴影都是显示效果设置，不会影响布局
+         */
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+
+            /* 
+                box-shadow:用来这是元素的阴影效果，阴影不会影响页面布局
+                    第一个值 水平偏移量 设置阴影的水平位置 正值向右移动 负值向左移动
+                    第二个值 垂直偏移量 设置阴影的垂直位置 正值向下移动 负值向上移动
+                    第三个值 阴影的模糊半径
+                    第四个值 阴影的颜色
+             */
+
+             box-shadow: 10px 10px 10px #aad18252 ;
+        }
+        /* 
+            outline 用来设置轮廓线，用法和border一样
+                轮廓和边框不同的点，就是轮廓不会影响到可见框的大小
+         */
+        .box:hover{
+            outline: 20px red solid;
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: darkcyan;
+
+            /* 
+                border-radius 用来设置四角
+                border-top-left-radius 用来设置左上角
+                border-top-right-radius 用来设置右上角
+                border-bottom-right-radius 用来设置右下角
+                border-bottom-left-radius 用来设置左下角
+
+                border-radius: 30px;           
+                border-radius: 25% 10%; 左上右下  右上左下 
+                border-radius: 10% 30% 50% 70%; 左上 右上 右下 左下
+                border-radius: 10% / 50%;  4个角（水平边/垂直边）
+                border-radius: 10px 100px / 120px;  左上右下（10px水平边 120px垂直边） 右上左下(100px水平边 120px垂直边)  
+                border-radius: 50% 20% / 10% 40%; 左上右下（50%水平边 10% 垂直边） 右上左下(20%水平边 40%垂直边)  
+             */
+
+              border-radius: 10px 100px / 10px;
+        }
+
+        
+    </style> 
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+</body>
+</html> 

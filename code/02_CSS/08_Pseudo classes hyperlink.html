@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类 超链接</title>
+    <style>
+        a {
+            font-size: 30px;
+        }
+
+        /* 
+            :link 这个代表未访问过的连接
+         */
+        a:link {
+            color: rgb(51, 13, 13);
+        }
+
+        /* 
+            :visited 代表访问过的链接
+
+            由于隐私的原因，所以visited这个伪类只能修改链接的颜色
+        */
+        a:visited {
+            color: black;
+        }
+
+        /* 
+            :hover 鼠标悬浮在字体上时出现的颜色
+         */
+
+        a:active{
+             color: red;
+
+         }
+        a:hover {
+            color: lightblue;
+        }
+
+        /* 
+            :active 用来表示鼠标点击
+         */
+
+        /* 
+         超链的四个伪类顺序
+            :link :visited :hover :active
+            link 与 visited 因为不可能同时触发，所以这2者之间顺序并没有影响
+            而 hover 和 active之间  若把hover放在active后面，当点击链接一瞬，实际你在激活active状态的同时触发了hover伪类,hover在后面覆盖了active的颜色，所以无法看到active的颜色。故hover在active之前 
+         */
+    </style>
+
+</head>
+
+<body>
+
+    <a href="https://www.baidu.com">Baidu</a>
+
+    <br><br>
+
+    <a href="https://www.bilibili.com">BiliBili</a>
+
+</body>
+
+</html>

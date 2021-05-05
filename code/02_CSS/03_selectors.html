@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器</title>
+    <style>
+        /*
+            注意：id是唯一的不可重复的
+                class是一个标签的属性，他和id类似，但是能重复使用
+        */
+
+        /*
+            标签选择器    
+        */
+        p {
+            color: brown;
+            font-size: 40px;
+        }
+
+        h1 {
+            color: darkred;
+            font-size: 50px;
+        }
+
+        /*
+            id选择器
+                根据元素的id属性值选中的一个元素
+                语法：#id属性值
+        */
+        #p21 {
+            color: darkturquoise;
+        }
+
+        /*
+            类选择器
+                作用根据元素的class属性值选中的一组元素
+                语法： .class属性值
+                同类相冲突的时候 选择器 后者覆盖前者
+        */
+        .blue{
+            color: indigo;
+            font-size: 20px;
+        }
+        .green{
+            color: green; 
+        } 
+
+        /* 
+            通配选择器
+                作用：选中页面中所有的元素
+                语法*
+        */
+        *{
+            color: lightcoral;
+        }
+       
+    </style>
+    <!-- <link rel="stylesheet" href="color.css"> -->
+</head>
+
+<body>
+    <h1 class="blue green">嫦娥</h1>
+    <p>云母屏风烛影深，</p>
+    <p>长河渐落晓星沉。</p>
+    <p>嫦娥应悔偷灵药，</p>
+    <p>碧海青天夜夜心。</p>
+    <br>
+    <h1>金陵图</h1>
+    <p id="p21">江雨霏霏江草齐，</p>
+    <!-- 
+        class是一个标签属性，他和id相似，不同的是class可以重复使用
+            可以通过class属性来为元素分组
+            可以同时为一个元素指定多个class属性
+     -->
+    <p class="green">六朝如梦鸟空啼。</p>
+    <p class="green">无情最是台城柳，</p>
+    <p>依旧烟笼十里堤。</p>
+</body>
+
+</html>

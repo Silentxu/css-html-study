@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontAwesome/css/all.css">
+    <style>
+        ul li{
+            list-style: none;
+        }
+
+        ul li::before{
+            /* 
+                通过伪元素来设置图标字体
+                    1.找到要设置图标的元素通过before和after选中
+                    2.content中设置字体的编码
+                    3.设置字体的样式
+                        fab
+                        font-family:"Font Amesome 5 Brands" ;
+
+                        fas
+                        font-family:"Font Awesome 5 Free"
+                        font-weight:900;       
+             */
+            content: "\f1b0";
+            font-family: 'Font Awesome 5 Brands';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: blue;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <h1>嫦娥</h1>
+        <li>云母屏风烛影深，</li>
+        <li>长河渐落晓星沉。</li>
+        <li>嫦娥应悔偷灵药，</li>
+        <li>碧海青天夜夜心。</li>
+    </ul>
+
+    <!-- 
+        通过实体来使用图标字体，
+            &#x图标的编码；
+     --> 
+
+     <span class="fas" style="color: red;">&#xf0f3;</span>
+</body>
+</html>

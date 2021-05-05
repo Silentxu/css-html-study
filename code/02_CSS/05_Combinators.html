@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关系选择器</title>
+
+    <style>
+        /* 
+            子选择器（其为父类直接关系的子类）
+         */
+
+        /* .box>p {
+            color: chartreuse;
+            font-size: 60px;
+        } */
+        /* 
+            后代选择器
+         */
+        /* .inner span {
+            color: darkblue;
+            font-size: 20px;
+        }  */
+
+        div.box>p>span>span{
+            color: darkmagenta;
+            font-size: 30px;
+        }
+
+        /* 
+            兄弟选择器
+            同级元素选择器
+            语法 前一个 + 后一个  
+            选择的是后一个
+            ~  选择的是后一个以及之后的同级元素
+         */
+
+         p + span{
+             color: darkred;
+         }
+
+         p ~ span {
+             color: darkred;
+             font-size: 40px;
+         }
+
+     
+    </style>
+</head>
+
+<body>
+    <div class="box">这是一位祖辈
+        <p>这是一位父辈
+            <span class="inner">这是一位小辈
+                <span>这是一位孙子辈</span>
+            </span>
+        </p>
+        <span>这是一位大叔</span>
+        <span>这是一位二叔</span>
+        <div>这是一位三叔</div>
+        <span>这是一位四叔</span>
+    </div>
+
+</body>
+
+</html>

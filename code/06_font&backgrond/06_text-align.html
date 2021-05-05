@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            border: red 1px solid;
+
+            /* 
+                text-align 文本的水平对齐
+                    可选值
+                        left 左端对齐
+                        right 右对齐
+                        center 居中对齐
+                        justify 两端对齐
+
+             */
+
+             text-align: justify;
+        }
+
+        span{
+            font-size: 10px;
+            border: solid blue 3px;
+
+            /*  
+               
+                vertical-align 设置元素垂直对齐的方式
+                    可选值：
+                        baseline 默认值 极限对齐
+                        top顶部对齐
+                        bottom底部对齐
+                        middle居中对齐
+
+                 图片和文本相似 也会存在基线对齐，底下会有一部分留白
+                    设置为vertical-align:bottom ;就能解决
+             */
+             vertical-align: middle;;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        这里比较大 BIG<span>这里比较小 small</span>!
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam rem ipsam facere non amet tempora temporibus, nihil id iusto harum, ullam est eius consequuntur, illo ducimus consequatur exercitationem vitae asperiores.
+    </div>
+</body>
+</html>

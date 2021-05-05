@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clock-wrapper{
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            position: relative;
+            margin: 20px auto;
+            background-image: url(img/clock.png);
+            background-size: cover;
+        }
+
+        .sec-wrapper{
+            width: 380px;
+            height: 380px;
+            position: absolute;
+            /* background-color: #bfc; */
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: auto;
+            animation-timing-function: linear;
+            animation: run 60s steps(60) infinite;
+        }
+
+        .sec-wrapper .sec{
+            width:2px;
+            height: 190px;
+            background-color: red;
+            margin: 0px auto;
+        }
+
+        .min-wrapper{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: auto;
+            animation-timing-function: linear;
+            animation: run 3600s infinite;
+            
+        }
+
+        .min-wrapper .min{
+            width:4px;
+            height: 150px;
+            background-color: black;
+            margin: 0px auto;
+        }
+
+        .hour-wrapper{
+            width: 170px;
+            height: 170px;
+            position: absolute;
+
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: auto;
+            animation-timing-function: linear;
+            animation: run 43200s infinite;
+            
+        }
+
+        .hour-wrapper .hour{
+            width:8px;
+            height: 50%;
+            background-color: black;
+            margin: 0px auto;
+        }
+
+        /* .clock-wrapper div{
+            animation-play-state: paused;
+        } */
+        @keyframes run {
+            from{
+                transform: rotateZ(0);
+            }
+
+            to{
+                transform: rotateZ(1turn);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clock-wrapper">
+        <div class="sec-wrapper"><div class="sec"></div></div>
+        <div class="min-wrapper"><div class="min"></div></div>
+        <div class="hour-wrapper"><div class="hour"></div></div>
+    </div>
+</body>
+</html>

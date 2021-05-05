@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+
+    <style>
+        /* 
+            [属性名]选择含有指定属性的元素
+         */
+
+         /* [title]{
+             color: darksalmon;
+             font-size: 40px;
+         } */
+
+         /* 
+            [属性名= 属性值]选择含有指定属性和属性值的元素
+          */
+
+          /* [title=h11]{
+              color: deeppink;
+              font-size: 40px;
+          } */
+
+          /* 
+            [属性名^=属性值]选择属性值以指定值开头的元素
+           */
+
+           /* [title^=p]{
+               color: gold;
+           } */
+
+           /* 
+            [属性名$=属性值]选择属性值以指定值结尾的元素
+            */
+
+            [title$=z2]{
+                color: indigo;
+            }
+
+            /* 
+                [属性名*=属性值]选择属性值中含有某值的元素的元素
+             */
+
+             [title*=z]{
+                color: orange;
+             }
+    </style>
+</head>
+<body>
+    <h1 title="h11z1">嫦娥</h1>
+    <p title="p1z2">云母屏风烛影深，</p>
+    <p title="p2z2">长河渐落晓星沉。</p>
+    <p>嫦娥应悔偷灵药，</p>
+    <p>碧海青天夜夜心。</p>
+    <br>
+    <h1 title="h12z2">金陵图</h1>
+    <p>江雨霏霏江草齐，</p>
+    <p>六朝如梦鸟空啼。</p>
+    <p>无情最是台城柳，</p>
+    <p>依旧烟笼十里堤。</p>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/03_layout/CSS/reset.css">
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+
+        /* 
+            设置菜单外部容器
+         */
+        .left-box {
+            width: 190px;
+            height: 450px;
+            padding: 10px 0;
+            background-color: #fff;
+            margin: 50px auto;
+        }
+
+        ul>li {
+            height: 25px;
+            padding-left: 20px;
+            /* 要让一个问题在父元素中垂直居中，只需要将父元素line-height设置为一个和父元素height相同的值 */
+            line-height: 25px;
+
+        }
+
+        li:hover {
+
+            background-color: #d9d9d9;
+        }
+
+        li a {
+            font-size: 14px;
+            color: #333333;
+            /* 去除超链的下划线 */
+            text-decoration: none;
+        }
+        li span{
+            font-size: 13px;
+            padding-right: 4px;
+        }
+
+        .left-box a:visited {
+            color: #333333;
+        }
+
+        .left-box a:link {
+            color: #333333;
+        }
+
+        .left-box a:hover {
+            color: #C81623;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="left-box">
+        <li><a href="javascript:;">家用电器</a></li>
+        <li><a href="javascript:;">手机</a>
+            <span>/</span><a href="javascript:;">运营商</a>
+            <span>/</span><a href="javascript:;">数码</a>
+        </li>
+        <li>
+            <a href="javascript:;">电脑</a>
+            <span>/</span><a href="javascript:;">办公</a>
+        </li>
+        <li>
+            <a href="javascript:;">家居</a>
+            <span>/</span><a href="javascript:;">家具</a>
+            <span>/</span><a href="javascript:;">家装</a>
+            <span>/</span><a href="javascript:;">厨具</a>
+        </li>
+        <li>
+            <a href="javascript:;">男装</a>
+            <span>/</span><a href="javascript:;">女装</a>
+            <span>/</span><a href="javascript:;">童装</a>
+            <span>/</span><a href="javascript:;">内衣</a>
+        </li>
+        <li>
+            <a href="javascript:;">美妆</a>
+            <span>/</span><a href="javascript:;">个护清洁</a>
+            <span>/</span><a href="javascript:;">宠物</a>
+        </li>
+        <li>
+            <a href="javascript:;">女鞋</a>
+            <span>/</span><a href="javascript:;">箱包</a>
+            <span>/</span><a href="javascript:;">钟表</a>
+            <span>/</span><a href="javascript:;">珠宝</a>
+        </li>
+        <li>
+            <a href="javascript:;">男鞋</a>
+            <span>/</span><a href="javascript:;">运动</a>
+            <span>/</span><a href="javascript:;">户外</a>
+        </li>
+
+    </ul>
+</body>
+
+</html>

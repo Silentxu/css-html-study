@@ -10,10 +10,21 @@
         // var arr = ["b", "d", "e", "a", "c"];
         // arr.sort();
         //console.log(arr);// "a", "b", "c", "d", "e" 
-        var arr = [2,3,5,9,11];
-        arr.sort();
-        console.log(arr);// 11, 2, 3, 5, 9 
-       
+        // var arr = [2,3,5,9,11];
+        // arr.sort();
+        // console.log(arr);// 11, 2, 3, 5, 9 
+        var arr = [5,4,3,6,5,3,9,123,11];
+        arr.sort(function (a, b) {
+            // console.log("a =" + a);
+            // console.log("b =" + b);
+        //     if (a > b) {
+        //         return 1;
+        //     }else{
+        //         return -1;
+        //     }
+            return a-b;
+        });
+        console.log(arr);
     </script>
 </head>
 

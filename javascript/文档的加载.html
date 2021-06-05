@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //onload时间会在这个页面加载完成之后才触发
+        //为window绑定一个onload事件
+        window.onload = function () {
+             //获取id为btn的按钮
+        var btn = document.getElementById("btn");
+        //  为按钮帮点一个单击事件
+        btn.onclick = function () {
+            alert("已点击！");
+        };
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">这是一个按钮</button>
+</body>
+</html>

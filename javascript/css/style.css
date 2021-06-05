@@ -1,0 +1,37 @@
+#total .inner {
+  width: 400px;
+  border: 1px black solid;
+  margin-left: 300px;
+  padding: 20px 10px;
+}
+#total .inner p {
+  line-height: 12px;
+  margin: 0px 10px;
+}
+#total .inner ul {
+  margin-top: 20px;
+}
+#total .inner ul li {
+  display: inline-block;
+  border: solid 1px black;
+  background-color: green;
+  padding: 10px;
+  margin-left: 10px;
+}
+#total .inner ul input {
+  display: block;
+}
+#total .inner ul br {
+  display: inline-block;
+}
+#total #btnList {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 720px;
+}
+#total #btnList div {
+  margin-bottom: 5px;
+  margin-left: 2px;
+}
+/*# sourceMappingURL=./style.css.map */

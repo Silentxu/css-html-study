@@ -16,6 +16,43 @@
     <!-- 引入当前页面的样式表 -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="favicon.ico">
+
+    <script>
+        window.onload = function () {
+            var prev = document.getElementsByClassName("prev");
+            var next = document.getElementsByClassName("next");
+            /*
+            要切换图片就是要修改img标签的src属性
+            */
+            //获取img标签
+            var img = document.getElementsByTagName("img")[7];
+            //console.log(img);
+            //img.src = "img/i4.jpg";
+            var imgArr = ["img/i1.jpg","img/i2.jpg","img/i3.jpg","img/i4.jpg","img/i5.jpg"];
+            var index = 0;
+            prev[0].onclick = function () {
+                //alert("上一张");
+                index--;
+                if (index<0) {
+                    index = imgArr.length-1;
+                }   
+                img.src = imgArr[index];
+                console.log(img.src);
+            };
+            next[0].onclick = function () {
+                //alert("下一张");
+                //切换图片就是修改img的src属性
+                index++;
+                if (index>imgArr.length+1) {
+                    index = 0;
+                }
+                img.src = imgArr[index];
+                console.log(img.src);
+            };
+            console.log(img.src);
+        }; 
+        console.log(window.onload);
+    </script>
 </head>
 
 <body>
@@ -199,7 +236,7 @@
                         <img src="img/i1.jpg" alt="">
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="">
                         <img src="img/i2.jpg" alt="">
                     </a>
@@ -218,7 +255,7 @@
                     <a href="">
                         <img src="img/i5.jpg" alt="">
                     </a>
-                </li>
+                </li> -->
             </ul>
 
             <div class="point">
@@ -230,7 +267,7 @@
             </div>
 
             <div class="prev-next">
-                <a class="prev" href=""></a>
+                <a id="prev" class="prev" href=""></a>
                 <a class="next" href=""></a>
             </div>
         </div>

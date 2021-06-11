@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 15px;
+}
+body #total #inner {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin-right: 20px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+body #total #inner p {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+body #total #inner #city {
+  display: flex;
+  width: 400px;
+  flex-wrap: wrap;
+}
+body #total #inner #city li {
+  line-height: 25px;
+  width: 40px;
+  text-align: center;
+  background-color: #90ee95;
+  border: 1px solid black;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+body #btnList button {
+  width: 300px;
+  margin-bottom: 15px;
+}
+/*# sourceMappingURL=./domStyle.css.map */

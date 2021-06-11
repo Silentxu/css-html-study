@@ -1,12 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        //设置按钮绑定单击响应的函数
+        function myClick(idStr, fun) {
+            var cb = document.getElementById(idStr);
+            cb.onclick = fun;
+        }
+        window.onload = function () {
+            var checkedAllBox = document.getElementById("checkedAllBox");
+            // 1.#checkedAllBth 全选
+            myClick("checkedAllBth", function () {
+                //获取四个多选框items
+                var all = document.getElementsByName("items");
+                checkedAllBox.checked = true;
+                for (let i = 0; i < all.length; i++) {
+                    //设置四个多选框变成选中状态 
+                    all[i].checked = true;
+                }
+            });
+            // 2.#checkedNoBtn 全不选
+            myClick("checkedNoBtn", function () {
+                //获取四个多选框items
+                var all = document.getElementsByName("items");
+                checkedAllBox.checked = false;
+                for (let i = 0; i < all.length; i++) {
+                    //设置四个多选框变成未选中状态 
+                    all[i].checked = false;
+                }
+            });
+            // 3.#checkedRevBth 反选
+            myClick("checkedRevBth", function () {
+                //获取四个多选框items
+                checkedAllBox.checked = true;
+                var all = document.getElementsByName("items");
+                for (let i = 0; i < all.length; i++) {
+                    //设置四个多选框变成未选中状态 
+                    all[i].checked = !(all[i].checked);
+                        if (!items[i].checked) {
+                            checkedAllBox.checked = false;
+                        }
+                }
+                // allOrNo();
+            });
+            // 4.#sendBth 提交
+            myClick("sendBth", function () {
+                //获取四个多选框items
+                var all = document.getElementsByName("items");
+                // alert("返学");
+                var arrStr = new Array();
+                for (let i = 0; i < all.length; i++) {
+                    //设置四个多选框变成未选中状态
+                    if (all[i].checked == true) {
+                        arrStr.push(all[i].id);
+                    }
+                }
+                if (arrStr.length == 0) {
+                    alert("请至少选择一项爱好。")
+                } else {
+                    alert(arrStr);
+                };
+            });
 
+            // 5.#checkedAllBox 多选框的 全选 全不选
+            myClick("checkedAllBox", function () {
+                //获取四个多选框items
+                var all = document.getElementsByName("items");
+                for (let i = 0; i < all.length; i++) {
+                    //在事件的响应函数中，响应函数是给谁绑定的this就是谁
+                    all[i].checked = this.checked;
+                };
+            });
+            // 6.#items
+            var items = document.getElementsByName("items");
+            //只要有一个false 就是false
+            //反之就是true
+            //方法1
+            function allOrNo() {
+                    var flag = true;
+                    for (let i = 0; i < items.length; i++) {
+                        if (items[i].checked == false) {
+                            flag = false;
+                            break;
+                        }
+                    }
+                    if (!flag) {
+                        checkedAllBox.checked = false;
+                    } else {
+                        checkedAllBox.checked = true;
+                    }
+                };
+
+            for (let j = 0; j < items.length; j++) {
+                items[j].onclick = function () {
+                    // allOrNo();
+                    //方法2
+                    checkedAllBox.checked = true;
+                    for (let i = 0; i < items.length; i++) {
+                        if (!items[i].checked) {
+                            checkedAllBox.checked = false;
+                            break;
+                        }
+                    }
+                }
+            };
+        }
+    </script>
 </head>
+
 <body>
 
     <form action="" method="POST">
@@ -24,4 +130,5 @@
         <input type="button" id="sendBth" value="提  交">
     </form>
 </body>
+
 </html>

@@ -16,10 +16,18 @@
         window.onload = function(){
             var info = document.getElementById("info");
             var input = document.getElementsByTagName("input")[0];
-            var button = document.getElementsByTagName("button")[0];
+            var input1 = document.getElementsByTagName("input")[1];
+            /**
+             * 当垂直滚动条滚动到底时使表单项可用
+             * onscroll
+             * 该事件会在元素的滚动条滚动时触发
+             */
             info.onscroll = function () {
+                //检查滚动条垂直是否滚动到底
                 if (info.scrollHeight - info.scrollTop == info.clientHeight) {
                     
+                    input.disabled = false;
+                    input1.disabled = false;
                 }
             }
         };
@@ -68,7 +76,7 @@
 17、平台有权根据其互联网的发展状况、法律法规和行业监管规定变化等，不时对用户注册须知进行必要修订，该等修改包括但不限于平台服务模式发生重大变化，如处理您信息的目的、信息的使用方式等；平台在控制权、组织架构、内部合作模式、合作对象等方面发生重大变化；您信息共享、转让或公开披露的主要对象发生变化；平台负责处理用户信息安全的责任部门、联络方式及投诉渠道发生变化；等。
 如发生上述变化，平台将通过平台公告等其他合理方式进行发布。您应随时关注并阅读最新版的须知及平台公告。您应通过平台提供的合理方式确认是否接受协议修改内容；若您不同意所修改的内容，应当立即停止使用本平台相关服务；若您在协议修订后继续使用平台服务，视为您同意并接受修改后的协议。平台运营方通过本平台发布的通知、公告、声明或其他类似的内容是本协议的组成部分。
     </p>
-    <input type="checkbox">如果已阅读并同意请点击按钮
-    <input type="submit" value="提交">
+    <input type="checkbox" disabled="disabled">如果已阅读并同意请点击按钮
+    <input type="submit" value="提交" disabled="disabled">
 </body>
 </html>

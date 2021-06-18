@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var btn01 = document.getElementById("btn01");
+            var li = document.createElement("li");
+            var u1 = document.getElementById("u1");
+            btn01.onclick = function () {
+                li.innerHTML = "<li><a href='javascript:;'>新的超链接</a></li>";
+                u1.appendChild(li);
+            }
+            /**
+             * 为每一个超链接都绑定一个单击响应函数
+             * 获取所有的a
+             */
+            var allA = document.getElementsByTagName("a");
+            // for (let i = 0; i < allA.length; i++) {
+            //     allA[i].onclick = function () {
+            //         alert("a的单击响应函数");
+            //     };
+
+            // }
+            /**
+             * 我们希望，只绑定一次事件，即可应用到多个的元素上，即使元素是后添加的
+             * 我么可以尝试将其帮顶给元素的共同的祖先元素
+             * 
+             * 事件的委派
+             * 指将时间统一帮顶给元素的共同的祖先元素，这样当后代元素上的事件触发后，会一直冒泡到祖先元素
+             * 从而通过祖先元素的响应来处理事件
+             * 事件委派是利用了冒泡，通过委派可以减少事件绑定的次数提高程序的性能
+             */
+            u1.onclick = function (event) {
+                event = event || window.event;
+                //alert(event.target);
+                //如果触发事件的对象是我们期望的元素，则执行否则不执行
+                if(event.target.className == "link"){
+                    alert("u1响应函数");
+                }
+            };
+            
+        };
+    </script>
+</head>
+
+<body>
+    <button id="btn01">添加超链接</button>
+    <ul id="u1">
+        <li><a href="javascript:;" class="link">超链接一</a></li>
+        <li><a href="javascript:;" class="link">超链接二</a></li>
+        <li><a href="javascript:;" class="link">超链接三</a></li>
+    </ul>
+</body>
+
+</html>

@@ -25,7 +25,11 @@
             info.onscroll = function () {
                 //检查滚动条垂直是否滚动到底
                 if (info.scrollHeight - info.scrollTop == info.clientHeight) {
-                    
+                    /**
+                     * disabled属性可以设置一个元素是否禁用
+                     * 如果设置为true，则元素禁用
+                     * 如果设置为false，则元素可用
+                     */
                     input.disabled = false;
                     input1.disabled = false;
                 }
